@@ -1,0 +1,65 @@
+// .letters-container{
+//     // width: max(10%,300px);
+//     width: fit-content;
+//     border: black solid ;
+//     display: flex;
+//     margin: 0.5em auto;
+//     flex-wrap: wrap;
+//     span{
+// display: inline-block;
+// width: 50px;
+// height: 50px;
+// text-align: center;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+//     }
+// }
+.circle{
+    background: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    margin-right: -28px;
+    top: -18px;
+    z-index: 1;
+    opacity: 0.3;
+}
+.circle1{
+    background: white;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    margin-right: -36px;
+    top: -28px;
+    z-index: 1;
+    opacity: 0.2;
+}
+.circle3{
+    background: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    margin-left: -28px;
+    bottom: -18px;
+    z-index: 1;
+    opacity: 0.3;
+}
+.circle4{
+    background: white;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    margin-left: -36px;
+    bottom: -28px;
+    z-index: 1;
+    opacity: 0.2;
+}

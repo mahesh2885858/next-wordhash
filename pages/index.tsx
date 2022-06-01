@@ -2,8 +2,13 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useContext } from 'react'
+import DisplayProgress from '../components/displayprogress/DisplayProgress'
+import Letters from '../components/Letters/Letters'
+import TickerModal from '../components/tickermodal/TickerModal'
+import Board from '../components/Board/Board'
+import KeyBoard from '../components/keyBoard/KeyBoard'
 import AppContextProvider, { Context } from '../components/AppContext/AppContext'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
   const contextdata = useContext(Context);
@@ -47,7 +52,7 @@ const Home: NextPage = () => {
       </div>
       <KeyBoard />
 
-      {false && <BottomNav />}
+      {/* {false && <BottomNav />} */}
     </div>
   );
 

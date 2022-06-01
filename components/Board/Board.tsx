@@ -1,21 +1,23 @@
 
 
 import { useContext, } from "react";
-// import Button from "../../ui/Buuton/Button";
 import CheckingTheWord from "../utils/checkingTheWord";
+import Button from "../Buuton/Button";
 import { Context } from "../AppContext/AppContext";
 import { actionsWords } from "../AppContext/AppContext";
 
-import "./board.scss";
+import styles from "./board.module.scss";
+import { useRouter } from "next/router";
 
 const Board: React.FC = () => {
     const data = useContext(Context);
+    const navigate = useRouter()
     const onEnter = () => {
         if (
             data?.state.gameStatus === "completed" ||
             data?.state.gameStatus === "over"
         ) {
-            //   navigate("/result");
+            navigate.push("/result");
         }
         if (data?.state.currentLetter !== 5) return;
         data?.dispatch({ type: actionsWords.checkTheWord, data: "" });
@@ -29,7 +31,7 @@ const Board: React.FC = () => {
             wordResult.isCorrect ||
             (data.state.currentAttempt === 5 && data.state.isAValidWord)
         ) {
-            //   navigate("/result");
+            navigate.push("/result");
         }
     };
 
@@ -55,7 +57,7 @@ const Board: React.FC = () => {
                     </div>
                 );
             })}
-            <div className="board-button-container">
+            <div className={styles.boardButtonContainer}>
 
                 <Button onEnter={onEnter} />
             </div>
