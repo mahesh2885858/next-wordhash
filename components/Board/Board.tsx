@@ -48,7 +48,11 @@ const Board: React.FC = () => {
                                 <span
                                     key={letter.id}
                                     className="w-[50px] h-[50px] lg:w-14  lg:h-14 placeholder-slate-300 text-slate-600 relative bg-[#caf1ff] rounded quiz-font border-0 shadow outline-none focus:outline-none focus:ring flex justify-center items-center uppercase font-bold blinkingCursor"
-                                    id={letter.status}
+                                    id={letter.status === "blink" ? styles.blink : (
+                                        letter.status === "" ? undefined : (
+                                            letter.status === "correct" ? styles.correct : styles.wrong
+                                        )
+                                    )}
                                 >
                                     {letter.value}
                                 </span>

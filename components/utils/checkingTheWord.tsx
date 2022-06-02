@@ -1,4 +1,4 @@
-import { boardLayout } from "../utils/Reducer/AppContext";
+import { boardLayout } from "../AppContext/AppContext";
 
 const CheckingTheWord = (
   board: boardLayout[],

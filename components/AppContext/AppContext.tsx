@@ -36,7 +36,6 @@ export interface stateType {
     clueCardUrl: string;
     isAValidWord: boolean | undefined
 }
-
 export const refinedLayout = [
     {
         rowId: "0",
